@@ -39,6 +39,7 @@ footer{
         height:56px;
         position: fixed;
         bottom: 0;
+        z-index: 1000;
         }
 footer ul{
         display: flex;

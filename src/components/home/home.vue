@@ -63,18 +63,18 @@ import business from '../home/business.vue'
             'banner':banner,
             'business':business
         },
+    
     }
 </script>
 <style scoped>
     .home{
         width: 100%;
+        color: white;
         position: absolute;
-        left: 0;
-        right: 0;
         top: 0;
         bottom:56px;
-        color: white;
         overflow: auto;
+
     }
     .search{
         width:100%;

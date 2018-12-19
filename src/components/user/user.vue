@@ -9,7 +9,7 @@
             <div class="headPortrait">
                 <img src="../../assets/logo.png" alt="">
             </div>
-            <div class="adminLink">
+            <router-link to="/login" tag="div" class="adminLink">
                 <div class="adminLinkWord">
                     <p>登录/注册</p>
                     <span>登录后享受更多的特权</span>
@@ -17,8 +17,7 @@
                 <div class="adminLinkUrl">
                     <icon name='右' :h='25' :w='25'></icon>
                 </div>
-
-            </div>
+           </router-link> 
         </div>
         </header>
         <ul class="nav">

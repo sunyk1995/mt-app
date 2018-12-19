@@ -4,7 +4,7 @@ import home from './components/home/home.vue'
 import find from './components/find/find.vue'
 import order from './components/order/order.vue'
 import user from './components/user/user.vue'
-
+import login from  './components/user/login.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -20,6 +20,9 @@ export default new Router({
   },
   {
     path:'/user',component:user
+  },
+  {
+    path:'/login',component:login
   }
   ],
   mode:'history'
