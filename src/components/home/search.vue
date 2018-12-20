@@ -16,6 +16,7 @@
         width: 100%;
         height: 38px;
         margin-left: 10px;
+
     }
     .searchIt input{
         width:97%;

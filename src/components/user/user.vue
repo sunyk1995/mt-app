@@ -70,7 +70,7 @@
  .user header{
     padding: 6px;
      width: 100%;
-     height: 30%;
+     height: 200px;
      background: #00A8FF;
  }
   .user header p{
