@@ -16,9 +16,13 @@
   }
 </script>
 <style>
-#app{
-
-}
+    a:link{
+        text-decoration: none;
+        color: black;
+    }
+    a:visited{
+        color: black;
+    }
 *{padding: 0;margin: 0;box-sizing: border-box;}
 ul,li{
   list-style: none;

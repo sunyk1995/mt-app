@@ -12,10 +12,10 @@
                   <icon name="筛选" :w="10" :h="10"></icon>
             </li>
         </ul>
-        <ul class="single-business-wrap">
-            <li class="single-business"  v-for="item in data" :key="item.name">
+        <div class="single-business-wrap">
+            <router-link :to="'/item/'+item.id" class="single-business"  v-for="item in dataRestrant" :key="item.name" tag="a">
                 <div class="single-img">
-                     <img :src="item.url" alt="">
+                     <img :src="item.pic_url" alt="">
                 </div>
                 <div class="item">
                     <p class="name">{{item.name}}</p>
@@ -36,33 +36,27 @@
                         </div>
                     </div>
                 </div>
-            </li>
-        </ul>
+            </router-link>
+        </div>
     </div>
 </template>
 <script>
+import axios from 'axios'
     export default{
         name:'business',
         data(){
             return{
-                data:[
-                    {
-                        name:'华莱士(炸鸡汉堡万年泉路店)',
-                        url:'https://fuss10.elemecdn.com/0/33/444bce196fba8741671dc913bb2f1jpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/',
-                    },
-                    {
-                        name:'陈记状元拌面',
-                        url:'https://fuss10.elemecdn.com/3/be/3cce637375c9d9244180a61d034a8png.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/',
-                    },{
-                        name:'三米铺粥(炸鸡汉堡万年泉路店)',
-                        url:'https://fuss10.elemecdn.com/d/b1/1b69b8cf603743b02d9a84d6f4d42png.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/',
-                    },{
-                        name:'华莱士(炸鸡汉堡万年泉路店)',
-                        url:'https://fuss10.elemecdn.com/0/33/444bce196fba8741671dc913bb2f1jpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/',
-                    }
-                ]
+                dataRestrant:[]
             }
-        }
+        },
+        created() {
+            axios.get('https://wd8733619841yvhhdw.wilddogio.com/data.json')
+            .then(msg=>{
+                let data = msg.data.poilist;
+                this.dataRestrant = data;
+                console.log(data[1].id)
+            })
+        },
     }
 </script>
 <style scoped>

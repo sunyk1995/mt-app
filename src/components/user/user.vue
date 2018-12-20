@@ -1,10 +1,12 @@
 <template>
     <div class="user">
         <header>
-        <p>
-            <icon name='左' :h='30' :w='30'></icon>
-            <span>我的</span>
-        </p>
+        <div class="title">
+            <p class="icon"  @click="goBack()">
+                <icon name='左' :h='30' :w='30'></icon>
+            </p>
+            <span class="my">我的</span>
+        </div>
         <div class="admin">
             <div class="headPortrait">
                 <img src="../../assets/logo.png" alt="">
@@ -58,6 +60,17 @@
         </ul>
     </div>
 </template>
+<script>
+    export default{
+        name:'user',
+        methods:{
+            goBack(){
+                console.log(1)
+                this.$router.go(-1);
+            }
+        }
+    }
+</script>
 <style scoped>
  .user{
     width: 100%;
@@ -72,14 +85,19 @@
      height: 200px;
      background: #00A8FF;
  }
-  .user header p{
-      display: flex;
+  .user header .title{
+      position: relative;
+      justify-content: space-between;
   }
-    .user header p span{
-        margin: 0 auto;
+    .user .my{
         font-weight: bold;
         font-size: 20px;
         color: white;
+        position: absolute;
+        left: 50%;
+        margin-left:-10px;
+        top:0;
+        
     }
     .user .admin{
         display: flex;
