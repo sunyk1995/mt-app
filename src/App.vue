@@ -1,17 +1,16 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <appFooter></appFooter> 
   </div>
 </template>
 <script>
-  import appFooter from './components/footer.vue'
+  // import appFooter from './components/footer.vue'
   import BScroll from 'better-scroll'
   export default {
     name:'app',
-    components:{
-      appFooter
-    },
+    // components:{
+    //   appFooter
+    // },
 
   }
 </script>

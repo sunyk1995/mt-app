@@ -9,15 +9,19 @@
             <p>登录后查看外卖订单信息！</p>
             <button @click="gotoLogin()">立即登录</button>
         </div>
+        <appFooter></appFooter>
     </div>
 </template>
 <script>
+import appFooter from '../../components/footer'
     export default{
         name:'beforeOrder',
         methods:{
             gotoLogin(){
                 this.$router.push('/login')
             }
+        },components:{
+            appFooter
         }
 
     }

@@ -19,6 +19,7 @@
         </div>
         <banner></banner>
         <business></business>
+        <app-footer></app-footer>
     </div>
 </template>
 <script>
@@ -26,6 +27,7 @@ import search from '../home/search.vue'
 import appNav from '../home/nav.vue'
 import banner from '../home/banner.vue'
 import business from '../home/business.vue'
+import appFooter from '../../components/footer'
     export default {
         name:'home',
         data(){
@@ -61,7 +63,8 @@ import business from '../home/business.vue'
             'search':search,
             appNav,
             'banner':banner,
-            'business':business
+            'business':business,
+            appFooter
         },
     
     }

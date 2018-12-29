@@ -40,6 +40,7 @@ footer{
         position: fixed;
         bottom: 0;
         z-index: 1000;
+        color: black;
         }
 footer ul{
         display: flex;

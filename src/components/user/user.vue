@@ -58,9 +58,11 @@
                 <icon class="right" name='右' :h='20' :w='20'></icon>
             </li>
         </ul>
+        <appFooter></appFooter>
     </div>
 </template>
 <script>
+import appFooter from '../../components/footer'
     export default{
         name:'user',
         methods:{
@@ -68,6 +70,9 @@
                 console.log(1)
                 this.$router.go(-1);
             }
+        },
+        components:{
+            appFooter
         }
     }
 </script>
